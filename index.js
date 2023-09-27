@@ -4,17 +4,16 @@
 //     return (element % 2 === 1);
 //   }
 
-function superbowlWIn(record) {
-
-    // let result = record.find( record => record.result === "W")
-    // return !!result ? result.year : undefined
-    const result = record.find( record => record.result === "W");
-    return !!result ? result.year : undefined;
+function superbowlWin(record){
+  for(let win of record){
+    if(win.result === "W"){
+      return win.year;
+    } 
+    else if(win.result === "L"){
+      return win.year;
+    }
+  }
 }
-const result = [
-  { year: "2015", result: "W" },
-  { year: "2014", result: "N/A" },
-  { year: "2013", result: "L" },
-  //...
-]
-console.log(result);
+record.find(superbowlWin);
+
+
