@@ -9,11 +9,10 @@ function superbowlWin(record){
     if(win.result === "W"){
       return win.year;
     } 
-    else if(win.result === "L"){
-      return win.year;
-    }
   }
 }
 record.find(superbowlWin);
 
 
+
+ 
